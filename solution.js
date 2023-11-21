@@ -28,10 +28,38 @@
 
 //Disemvoweling 
 
+// const trollsBeGone = (str) => {
+//     return noVowels = str.replace(/[aeiou]/gi, '') 
+// }
+// console.log(trollsBeGone("This website is for losers LOL"))
 
-const trollsBeGone = (str) => {
-    //looping thru the string
-    return noVowels = str.replace(/[aeiou]/gi, '') 
+/////////////////////////////////////////
+
+//Bank Account Summary
+
+const bankInfo = {
+    savings: 600,
+    checking: 800,
+    moneyMarket: 200,
+    creditCard: -2000
 }
-console.log(trollsBeGone("This website is for losers LOL"))
+
+const bankAccountSummary = (v) => {
+    let balance = 0;
+    for (el in v) { // for in loop can be used for add up numbers; for of loop can only be used on the strings and array
+        balance += v[el]
+    }
+    return balance
+}
+console.log(bankAccountSummary(bankInfo))
+let bankTotal = bankAccountSummary(bankInfo)
+
+const inTheRed = (t) => {
+    return t < 0 
+}
+console.log(inTheRed(bankTotal))
+
+//////////////////////////////////////////
+
+
 
